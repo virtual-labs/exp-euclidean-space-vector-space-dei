@@ -7,17 +7,45 @@
 <link rel = "icon" href = "https://www.vlab.co.in/images/logo.jpg" type = "image/x-icon">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<style type="text/css">
-	
+<style>
+    body, html {
+  margin: 0;
+  font-family: Arial;
+}
+	h1{
+  		background-color: #87ceeb;
+  		align-content: center;
+  		text-align: center;
+	}
+
+	.headbtn{
+		font-style: bold;
+  		color:white;
+  		font-size: 24px;
+  		display: block;
+  		text-align: left;
+ 		width: 7em;
+  		height: 1.5em;
+  		background-color: rgb(221,191,218);
+  		position:absolute;
+  		float: left;
+        border:2px solid indigo;
+        padding: 1px 1px 1px 1px;
+	}
+
+	* {
+  box-sizing: border-box;
+}
 .responsive-three-column-grid {
     display:block;
     float: center;
-    margin-top: 0;
+
 }
 
 .responsive-three-column-grid > * {
     padding:.1rem 1rem;
     margin: 0.5rem;
+    background-color: silver;
 }
 
 @media (min-width:768px) {
@@ -28,44 +56,19 @@
     }
 }
 .col1{
-    border:2px solid crimson;
+    border:2px solid indigo;
 }
 .col2{
-    border:2px solid green;
+    border:2px solid indianred;
 }
 .col3{
-    border:2px solid #009;
+    border:2px solid green;
 }
-.modelcol{
-    display:block;
-    float:center;
-    background-color: antiquewhite;
-    padding:1rem 2rem;
+form{
+    align:center;
     text-align: center;
-    border:2px solid darkorange;
 }
-.exphead{
-	background-color: #87ceeb;
-	align-content: center;
-	text-align: center;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-.linkhead{
-    align-content: center;
-    text-align: center;
-    background-color: bisque;
-    border: 2px solid brown;
-}
-.intro{
-    display: block;
-    text-align: center;
-    font-size:20px;
-    color: orangered;
-}
-canvas {
-    display: block;
-}
+
 .next{
     background-color: #04AA6D;
     color: white;
@@ -75,7 +78,7 @@ canvas {
     text-align: center;
     padding: 8px 16px;
     text-decoration: none;
-    width:5rem;
+    width:8rem;
     float:right;
 }
 .next:hover {
@@ -93,105 +96,240 @@ canvas {
     text-align: center;
     padding: 8px 16px;
     text-decoration: none;
-    width:5rem;
+    width:8rem;
 }
 .previous:hover {
   background-color: #ada;
   color: black;
 }
 
-input{
-    background-color: #edbb99;
-    align-content: center;
-    text-align: center;
-    font-style:bold italic;
-    font-size: 14px;
-    color:white;
-    border:.5px solid red;
-    color: black;
-}
-input:hover{
-    background-color: brown;
-    color:white;
-}
-.plane{
-    cursor: crosshair;
-}
-.boxhead{
-    margin:0.5rem 0.5rem 0.5rem 0.5rem;
-}
-p{
-    margin:0.5rem 0.5rem 0.5rem 0.5rem;
+.tablink {
+  background-color: lightgray;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px 8px;
+  font-size: 15px;
+  width: 49%;
 }
 
-.stepbtn{
-    display:inline-block;
-    color:red;
-    border:1px solid yellow;
-    background: lightyellow;
-    box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
-    vertical-align:middle;
-    width:6rem;
-    padding: 5px;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-
+.tablink:hover {
+  background-color: yellow;
+  color: black;
 }
+
+.tabcontent {
+  display: none;
+  padding: 40px 10px;
+}
+
 </style>
 </head>
+
 <body>
-    
     <p style="float: center; align-content:right;">
-        <a href="./" class="previous">&laquo; Home</a>
-        <a href="./simulation/operations.html" class="next" >Next &raquo;</a>
-    </p>
-    <br><br><br>
-    <h1 class="exphead">n-Dimensional Euclidean Space</h1>
-    <h2 class="linkhead">Link (One-to-One Correspondence) between Plane, R<sup>2</sup> and Vectors at Origin</h2>
+<a href="./simulation/" class="previous">&laquo; Previous</a>
+<a href="./simulation/ndeuclideanspace.html" class="next" >Next &raquo;</a></p><br><br>
+	<h1> 2-Dimensional Euclidean Space</h1>
+    <div class="headbtn"><span style="color:indigo;">Underlying Set</span> </div><br><br><br>
+    <span style="font-size: 22px; color:purple; display: block; background-color: #ffee75;"> &emsp; R<sup>2</sup> (i.e. Plane / Vectors at Origin)</span>
+    <br>
+	<div class="headbtn"><span style="color:indigo;">OPERATIONS</span></div>
+	<br><br><br>
+    <button class="tablink" onclick="openPage('add', this, 'crimson')" id="defaultOpen">Addition</button>
+    <button class="tablink" onclick="openPage('mul', this, 'crimson')">Scalar Multiplication</button>
+
+<div id="add" class="tabcontent">
 	<div class="responsive-three-column-grid">
-    
-    <div class="col1" style="background-color:#fbeee6;">
-        <div class="stepbtn">Step-1</div>
-    	<h3 class="boxhead" style="color:darkred; background-color: #fadbd8; text-align: center; font-size: 25px;">1. Points on Plane</h3>
-        <p style="background-color: #e8f5e9">(<span style="font-weight: bold;">Plane: </span> It is not a well defined term. It can be understood as a flat surface like top of a table that extends indefinitely in all the directions.)</p>
-        <p style="font-weight: bold; color:red;">Pick a point by clicking on plane given below</p>
-         <canvas class="plane" id="graphcanvas" width="250" height="250"></canvas>
-         <p id="note1" style="color:blue;"></p>
+  <div class="col1" style="background-color:#fbeee6;">
+  	<h3 style="color:indigo;"> Pick points P(a,b) & Q(c,d) &isin; R<sup>2</sup> to obtain S=P+Q</h3>
+  	<h5>Enter:</h5> 
+  <form id="cord_form" action="?" method="POST">
+  <label for="a_cord">a:</label>
+  <input type="text" id="a_cord" name="a_cord"><br><br>
+  <label for="b_cord">b:</label>
+  <input type="text" id="b_cord" name="b_cord"><br><br>
+  <label for="c_cord">c:</label>
+  <input type="text" id="c_cord" name="c_cord"><br><br>
+  <label for="d_cord">d:</label>          
+  <input type="text" id="d_cord" name="d_cord"><br><br>
+  <button type="button" onclick="addition();">Submit</button><br/><br>
+  <label style="color:blue;">Coordinate values: </label>
+  <p id='displayab' style="color:green;"></p>
+  <p id='displaycd' style="color:green;"></p>
+    <p id='displayabcd' style="color:deeppink;"></p>
+</form>
 
-    </div>
-    <div class="col2" style="background-color:#fbeee6;">
-        <div class="stepbtn">Step-2</div>
-        <h3 class="boxhead" style="color:darkgreen; background-color:#e8f6f3; text-align:center; font-size:25px;">2. Geometric Visualization</h3>
-        <p style="color:darkgreen;"><strong>Given pair of axes</strong></p>
-        <canvas id="my-canvas" width="250" height="250"></canvas>
-        <p id='printpoint1cords' style="font-size: 20px; color: green;"></p>
-        <p id="note2" style="color:blue"></p>
-        
+  </div>
+  
+  <div class="col2" style="background-color:#fbeee6;">
+  	<h3 style="color:maroon;"> Location of Points and Sum</h3>
+    <canvas id="graphcanvas" width="250vw" height="250vh"></canvas>
+    <br>
+    <p id="note1" style="color:blue;"></p>
+  </div>
 
-    </div>
-    <div class="col3" style="background-color:#fbeee6;">
-    	<div class="stepbtn">Step-3</div>
-        <h3 class="boxhead" style="color:#000099; background-color: #ccffff; text-align: center; font-size: 25px;">3. Vector Representation</h3>
-        <canvas id="grphcnvs" width="250" height="250"></canvas>
-        <p id="note3" style="color:blue"></p>
+  <div class="col3" style="background-color:#fbeee6;">
+  	<h3 style="color:darkgreen;"> Vector Representation of Points and Sum</h3>
+    <canvas id="my-canvas" width="250vw" height="250vh"></canvas>
 
-    </div>
-    
+    <br>
+    <p id="note2" style="color:blue;"></p>
+  </div>
+</div>
+</div>
+<div id="mul" class="tabcontent">
+	<div class="responsive-three-column-grid">
+  <div class="col1" style="background-color:#fbeee6;">
+  	<h3 style="color:indigo;">Pick points &alpha; & P(m,n) &isin; R to obtain S = &alpha;.P</h3>
+  	<h5>Enter:</h5>
+  <form id="cord_form" action="?" method="POST">
+  <label for="al_cord">&alpha;:</label>
+  <input type="text" id="al_cord" name="al_cord"><br><br>
+  <label for="m_cord">m:</label>
+  <input type="text" id="m_cord" name="m_cord"><br><br>
+  <label for="n_cord">n:</label>
+  <input type="text" id="n_cord" name="n_cord"><br><br>
+  <button type="button" onclick="multiplication();">Submit</button><br/><br>
+  <label style="color:blue;">Coordinate values: </label>
+  <p id='displayal' style="color:green;"></p>
+  <p id='displaymn' style="color:green;"></p>
+    <p id='displayalmn' style="font-style:bold; color:deeppink;"></p>
+</form>
+
+  </div>
+  
+  <div class="col2" style="background-color:#fbeee6;">
+  	<h3 style="color:maroon;">Location of Points and Scalar Multiplication</h3>
+    <canvas id="grphcanvas" width="250vw" height="250vh"></canvas>
+    <br>
+    <p id="note3" style="color:blue;"></p>
+  </div>
+
+  <div class="col3" style="background-color:#fbeee6;">
+  	<h3 style="color:green;">Vector Representation of Points and Scalar Multiplication</h3>
+    <canvas id="grphcnvs" width="250vw" height="250vh"></canvas>
+    <br>
+    <p id="note4" style="color:blue;"></p>
+  </div>
 </div>
 
-<div class="modelcol">
-    <h3 class="boxhead" style="color:firebrick; background-color: rgb(255,255,179); text-align: center; font-size: 25px;">MATH MODEL of Plane</h3>
-    <p style="font-weight: bold; font-size: 24px;">R<sup>2</sup> = {(x , y) | x , y &isin; R}</p>
 </div>
-<p style="float: center; align-content:right;">
-<a href="./" class="previous">&laquo; Home</a>
-<a href="./simulation/operations.html" class="next" >Next &raquo;</a></p>
+<div class="statement" style="background-color: #fff9c4; font-size: 20px; text-align:center;">
+    <p>-- Practice operations in R<sup>n</sup> as you have done for R<sup>2</sup> --</p>
+</div>
+
+ <p style="float: center; align-content:right;">
+<a href="./simulation/" class="previous">&laquo; Previous</a>
+<a href="./simulation/ndeuclideanspace.html" class="next" >Next &raquo;</a></p>
 </body>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript">
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+document.getElementById("defaultOpen").click();
+
+function addition() {
+    let a = document.querySelector("#a_cord").value;
+    let b = document.querySelector("#b_cord").value;
+    let c = document.querySelector("#c_cord").value;
+    let d = document.querySelector("#d_cord").value;
 
 
-<script type="text/javascript" charset="utf-8">
+        document.getElementById('displayab').innerHTML = ("(a,b) = ("+a+","+b+")");
 
+        document.getElementById('displaycd').innerHTML = ("(c,d) = ("+c+","+d+")");
+
+        document.getElementById('displayabcd').innerHTML =
+        ("S &equiv; (a+c , b+d) = " + "("+(Number(a)+Number(c)) + " , " + (Number(b)+Number(d))+")");
+
+        document.getElementById('note1').innerHTML = "Note: Addition performed w.r.t. the given pair of axes.";
+        document.getElementById('note2').innerHTML = "Note: Addition performed w.r.t. the given pair of axes.";
+
+        drawCoordinates(Number(a)*grid_size,-Number(b)*grid_size,"green");
+
+		drawCoordinates(Number(c)*grid_size,-Number(d)*grid_size,"green");
+
+		drawCoordinates((Number(a)+Number(c))*grid_size,-(Number(b)+Number(d))*grid_size,"deeppink");
+
+		drawCoords(Number(a)*gridsize,-Number(b)*gridsize,"green");
+
+		drawCoords(Number(c)*gridsize,-Number(d)*gridsize,"green");
+
+		drawCoords((Number(a)+Number(c))*gridsize,-(Number(b)+Number(d))*gridsize,"deeppink");
+
+		ctx.beginPath();
+
+		canvas_arrow(ctx, 0*grid_size,0*grid_size,a*gridsize,-b*gridsize,"black");
+
+		canvas_arrow(ctx, 0*grid_size,0*grid_size,c*gridsize,-d*gridsize,"black");
+
+		canvas_arrow(ctx, a*gridsize,-b*gridsize,(Number(a)+Number(c))*gridsize,-(Number(b)+Number(d))*gridsize,"black");
+
+		canvas_arrow(ctx, c*gridsize,-d*gridsize,(Number(a)+Number(c))*gridsize,-(Number(b)+Number(d))*gridsize,"black");
+
+		canvas_arrow(ctx, 0*grid_size,0*grid_size,(Number(a)+Number(c))*gridsize,-(Number(b)+Number(d))*gridsize,"black");
+
+		ctx.stroke();
+		ctx.lineWidth(3);
+		ctx.closepath();
+
+    }
+
+function multiplication() {
+    let al = document.querySelector("#al_cord").value;
+    let m = document.querySelector("#m_cord").value;
+    let n = document.querySelector("#n_cord").value;
+
+        document.getElementById('displayal').innerHTML = 
+                    ("&alpha; = ("+al+")");
+
+        document.getElementById('displaymn').innerHTML = 
+                    ("(m,n) = ("+m+","+n+")");
+
+        document.getElementById('displayalmn').innerHTML =
+        ("S &equiv; (&alpha;m , &alpha;n) = " + "("+(Number(al)*Number(m)) + " , " + (Number(al)*Number(n))+")");
+
+        document.getElementById('note3').innerHTML = "Note: Scalar Multiplication performed w.r.t. the given pair of axis.";
+        document.getElementById('note4').innerHTML = "Note: Scalar Multiplication performed w.r.t. the given pair of axis.";
+
+		drawCoordnts(Number(m)*grdsize,-Number(n)*grdsize,"green");
+
+		drawCoordnts((Number(al))*(Number(m))*grdsize,(Number(al)*-(Number(n)))*grdsize,"deeppink");
+
+		drawCoordints(Number(m)*grdsze,-Number(n)*grdsze,"green");
+
+		drawCoordints((Number(al))*(Number(m))*grdsze,(Number(al)*-(Number(n)))*grdsze,"deeppink");
+
+		cntxt.beginPath();
+		cnvs_arrw(cntxt, 0*grdsze,0*grdsze,m*grdsze,-n*grdsze,"black");
+
+		cnvs_arrw(cntxt, m*grdsze,-n*grdsze,(Number(al))*(Number(m))*grdsze,(Number(al)*-(Number(n)))*grdsze,"black");
+
+		cnvs_arrw(cntxt, 0*grdsze,0*grdsze,(Number(al))*(Number(m))*grdsze,(Number(al)*-(Number(n)))*grdsze,"black");
+
+	
+		cntxt.stroke();
+		cntxt.lineWidth(3);
+		cntxt.closepath();
+
+
+    }
+
+ 
 var grid_size = 12;
 var x_axis_distance_grid_lines = 10;
 var y_axis_distance_grid_lines = 5;
@@ -199,6 +337,8 @@ var x_axis_starting_point = { number: 1, suffix: '' };
 var y_axis_starting_point = { number: 1, suffix: '' };
 
 var canvas = document.getElementById("my-canvas");
+//canvas.setAttribute("style", "position: absolute; x:0; y:0;");
+//document.body.appendChild(canvas);
 
 var ctx = canvas.getContext("2d");
 
@@ -207,7 +347,7 @@ var canvas_height = canvas.height;
 
 var num_lines_x = Math.floor(canvas_width/grid_size);
 var num_lines_y = Math.floor(canvas_height/grid_size);
-        
+
 // Draw grid lines along X-axis
 for(var i=0; i<=num_lines_x; i++) {
     ctx.beginPath();
@@ -217,7 +357,7 @@ for(var i=0; i<=num_lines_x; i++) {
     if(i == x_axis_distance_grid_lines) 
         ctx.strokeStyle = "#000000";
     else
-        ctx.strokeStyle = "#dcdcdc";
+        ctx.strokeStyle = "#e9e9e9";
     
     if(i == num_lines_x) {
         ctx.moveTo(0, grid_size*i);
@@ -239,7 +379,7 @@ for(i=0; i<=num_lines_y; i++) {
     if(i == y_axis_distance_grid_lines) 
         ctx.strokeStyle = "#000000";
     else
-        ctx.strokeStyle = "#dcdcdc";
+        ctx.strokeStyle = "#e9e9e9";
 
     if(i == num_lines_y) {
         ctx.moveTo(grid_size*i, 0);
@@ -291,7 +431,24 @@ for(i=1; i<y_axis_distance_grid_lines; i++) {
 }
 
 // Ticks marks along the negative Y-axis
-for(i=1; i<( x_axis_distance_grid_lines); i++) {
+for(i=1; i<(num_lines_x - x_axis_distance_grid_lines); i++) {
+    ctx.beginPath();
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "#000000";
+
+    // Draw a tick mark 6px long (-3 to 3)
+    ctx.moveTo(-3, grid_size*i+0.5);
+    ctx.lineTo(3, grid_size*i+0.5);
+    ctx.stroke();
+
+    // Text value at that point
+    ctx.font = '9px Arial';
+    ctx.textAlign = 'start';
+    ctx.fillText(y_axis_starting_point.number*i + y_axis_starting_point.suffix, 8, -grid_size*i+3);
+}
+
+// Ticks marks along the positive Y-axis
+for(i=1; i<(x_axis_distance_grid_lines); i++) {
     ctx.beginPath();
     ctx.lineWidth = 1;
     ctx.strokeStyle = "#000000";
@@ -307,24 +464,6 @@ for(i=1; i<( x_axis_distance_grid_lines); i++) {
     ctx.fillText(-y_axis_starting_point.number*i + y_axis_starting_point.suffix, 8, grid_size*i+3);
 }
 
-// Ticks marks along the positive Y-axis
-for(i=1; i<(num_lines_x -x_axis_distance_grid_lines); i++) {
-    ctx.beginPath();
-    ctx.lineWidth = 1;
-    ctx.strokeStyle = "#000000";
-
-    // Draw a tick mark 6px long (-3 to 3)
-    ctx.moveTo(-3, grid_size*i+0.5);
-    ctx.lineTo(3, grid_size*i+0.5);
-    ctx.stroke();
-
-    // Text value at that point
-    ctx.font = '9px Arial';
-    ctx.textAlign = 'start';
-    ctx.fillText(y_axis_starting_point.number*i + y_axis_starting_point.suffix, 8, -grid_size*i+3);
-    
-}
-
 function drawCoordinates(x,y,bg){
     var pointSize = 3; // Change according to the size of the point.
    
@@ -334,6 +473,24 @@ function drawCoordinates(x,y,bg){
     ctx.arc(x, y, pointSize, 0, Math.PI * 2, true); // Draw a point using the arc function of the canvas with a point structure.
     ctx.fill(); // Close the path and fill.
 }
+
+
+
+function canvas_arrow(ctx, fromx, fromy, tox, toy,clr) {
+  var headlen = 10; // length of head in pixels
+  var dx = tox - fromx;
+  var dy = toy - fromy;
+  var angle = Math.atan2(dy, dx);
+  ctx.strokeStyle=clr;
+  ctx.moveTo(fromx, fromy);
+  ctx.lineTo(tox, toy);
+  ctx.lineTo(tox - headlen * Math.cos(angle - Math.PI / 6), toy - headlen * Math.sin(angle - Math.PI / 6));
+  ctx.moveTo(tox, toy);
+  ctx.lineTo(tox - headlen * Math.cos(angle + Math.PI / 6), toy - headlen * Math.sin(angle + Math.PI / 6));
+
+}
+
+
 
   
 var gridsize = 12;
@@ -351,33 +508,6 @@ var context = cnvs.getContext("2d");
 var cnvs_width = cnvs.width;
 var cnvs_height = cnvs.height;
 
-//context.fillRect(0, 0, canvas.width, canvas.height);
-const coords = document.querySelector('.display-coords');
-const getCoords = (event) => {
-  const container = cnvs.getBoundingClientRect();
-  const x1 = (event.clientX - 2*cnvs.offsetLeft)/25;
-  const y1 = (event.clientY - 0.5*cnvs.offsetTop)/25;
-
-  //coords.textContent = 'Picked a Point P. Now, you can see the coordinates of picked point.'
-  //coords.textContent = `(${x1}, ${y1})`;
-  drawCoords(x1*grid_size,y1*grid_size,'green');
-  drawCoordinates(x1*grid_size,y1*grid_size,'green');
-  document.getElementById('printpoint1cords').innerHTML=`(x , y) = (${x1} , ${-y1})`; 
-  document.getElementById('note3').innerHTML=`<u style="color:#009;"><strong style="color:#009;">NOTE:</strong></u> The line segment joining the origin and the point directed towards the point is a vector at origin associated with the point.`;
-  document.getElementById('note2').innerHTML=`<u style="color:#009;"><strong style="color:#009;">NOTE:</strong></u><ol><li>The values of x and y are approximate values.</li> <li>The values displayed for x & y are for the last choosen point.</li></ol>`; 
-  document.getElementById('note1').innerHTML=`<u style="color:#009;"><strong style="color:#009;">NOTE:</strong></u> You are advised to REFRESH the page before picking another point on plane, although you can do so without refreshing the page.`; 
-  drawCoordints(x1*grdsze,y1*grdsze,'green');
-    cntxt.beginPath();
-    cnvs_arrw(cntxt, 0*grdsze, 0*grdsze, x1*grdsze, y1*grdsze, 'green');
-    cntxt.stroke();
-    cntxt.lineWidth(3);
-    cntxt.closePath();
-
-     
-    
-     
-};
-cnvs.addEventListener('click', getCoords);
 var num_x = Math.floor(cnvs_width/gridsize);
 var num_y = Math.floor(cnvs_height/gridsize);
 
@@ -388,9 +518,9 @@ for(var i=0; i<=num_x; i++) {
     
     // If line represents X-axis draw in different color
     if(i == x_distance_grid_lines) 
-        context.strokeStyle = "#dcdcdc";
+        context.strokeStyle = "#000000";
     else
-        context.strokeStyle = "#dcdcdc";
+        context.strokeStyle = "#e9e9e9";
     
     if(i == num_x) {
         context.moveTo(0, gridsize*i);
@@ -410,9 +540,9 @@ for(i=0; i<=num_y; i++) {
     
     // If line represents X-axis draw in different color
     if(i == y_distance_grid_lines) 
-        context.strokeStyle = "#dcdcdc";
+        context.strokeStyle = "#000000";
     else
-        context.strokeStyle = "#dcdcdc";
+        context.strokeStyle = "#e9e9e9";
 
     if(i == num_y) {
         context.moveTo(gridsize*i, 0);
@@ -429,6 +559,76 @@ for(i=0; i<=num_y; i++) {
 // Translate to the new origin. Now Y-axis of the canvas is opposite to the Y-axis of the graph. So the y-coordinate of each element will be negative of the actual
 context.translate(y_distance_grid_lines*gridsize, x_distance_grid_lines*gridsize);
 
+// Ticks marks along the positive X-axis
+for(i=1; i<(num_y - y_distance_grid_lines); i++) {
+    context.beginPath();
+    context.lineWidth = 1;
+    context.strokeStyle = "#000000";
+
+    // Draw a tick mark 6px long (-3 to 3)
+    context.moveTo(gridsize*i+0.5, -3);
+    context.lineTo(gridsize*i+0.5, 3);
+    context.stroke();
+
+    // Text value at that point
+    context.font = '9px Arial';
+    context.textAlign = 'start';
+    context.fillText(x_starting_point.number*i + x_starting_point.suffix, gridsize*i-2, 15);
+}
+
+// Ticks marks along the negative X-axis
+for(i=1; i<y_distance_grid_lines; i++) {
+    context.beginPath();
+    context.lineWidth = 1;
+    context.strokeStyle = "#000000";
+
+    // Draw a tick mark 6px long (-3 to 3)
+    context.moveTo(-gridsize*i+0.5, -3);
+    context.lineTo(-gridsize*i+0.5, 3);
+    context.stroke();
+
+    // Text value at that point
+    context.font = '9px Arial';
+    context.textAlign = 'end';
+    context.fillText(-x_starting_point.number*i + x_starting_point.suffix, -gridsize*i+3, 15);
+}
+
+// Ticks marks along the negative Y-axis
+// Positive Y-axis of graph is negative Y-axis of the canvas
+for(i=1; i<(num_x - x_distance_grid_lines); i++) {
+    context.beginPath();
+    context.lineWidth = 1;
+    context.strokeStyle = "#000000";
+
+    // Draw a tick mark 6px long (-3 to 3)
+    context.moveTo(-3, gridsize*i+0.5);
+    context.lineTo(3, gridsize*i+0.5);
+    context.stroke();
+
+    // Text value at that point
+    context.font = '9px Arial';
+    context.textAlign = 'start';
+    context.fillText(y_starting_point.number*i + y_starting_point.suffix, 8, -gridsize*i+3);
+}
+
+// Ticks marks along the positive Y-axis
+for(i=1; i<(x_distance_grid_lines); i++) {
+    context.beginPath();
+    context.lineWidth = 1;
+    context.strokeStyle = "#000000";
+
+    // Draw a tick mark 6px long (-3 to 3)
+    context.moveTo(-3, -gridsize*i+0.5);
+    context.lineTo(3, -gridsize*i+0.5);
+    context.stroke();
+
+    // Text value at that point
+    context.font = '9px Arial';
+    context.textAlign = 'start';
+    context.fillText(-y_starting_point.number*i + y_starting_point.suffix, 8, gridsize*i+3);
+}
+    
+
 
 
 function drawCoords(x,y,bg){
@@ -437,9 +637,176 @@ function drawCoords(x,y,bg){
     context.fillStyle = bg; // Red color
 
     context.beginPath(); //Start path
-    context.arc(x, y, pntSize, 0, Math.PI * 2, true); //Draw a point using the arc function of the canvas with a point structure.
+    context.arc(x, y, pntSize, 0, Math.PI * 2, true); // Draw a point using the arc function of the canvas with a point structure.
     context.fill(); // Close the path and fill.
 }
+
+
+
+function cnvs_arrow(context, from_x, from_y, to_x, to_y) {
+  var headlength = 10; // length of head in pixels
+  var distx = to_x - from_x;
+  var disty = to_y - from_y;
+  var angl = Math.atan2(disty, distx);
+
+  context.moveTo(from_x, from_y);
+  context.lineTo(to_x, to_y);
+  context.lineTo(to_x - headlength * Math.cos(angl - Math.PI / 6), to_y - headlength * Math.sin(angl - Math.PI / 6));
+  context.moveTo(to_x, to_y);
+  context.lineTo(to_x - headlength * Math.cos(angl + Math.PI / 6), to_y - headlength * Math.sin(angl + Math.PI / 6));
+
+}
+
+  
+var grdsize = 12;
+var x_dist_grid_lines = 10;
+var y_dist_grid_lines = 5;
+var x_start_point = { number: 1, suffix: '' };
+var y_start_point = { number: 1, suffix: '' };
+
+var cvs = document.getElementById("grphcanvas");
+//canvas.setAttribute("style", "position: absolute; x:0; y:0;");
+//document.body.appendChild(canvas);
+
+var cntext = cvs.getContext("2d");
+
+var cvs_width = cvs.width;
+var cvs_height = cvs.height;
+
+var numx = Math.floor(cvs_width/gridsize);
+var numy = Math.floor(cvs_height/gridsize);
+
+// Draw grid lines along X-axis
+for(var i=0; i<=numx; i++) {
+    cntext.beginPath();
+    cntext.lineWidth = 1;
+    
+    // If line represents X-axis draw in different color
+    if(i == x_dist_grid_lines) 
+        cntext.strokeStyle = "#000000";
+    else
+        cntext.strokeStyle = "#e9e9e9";
+    
+    if(i == numx) {
+        cntext.moveTo(0, grdsize*i);
+        cntext.lineTo(cvs_width, grdsize*i);
+    }
+    else {
+        cntext.moveTo(0, grdsize*i+0.5);
+        cntext.lineTo(cvs_height, grdsize*i+0.5);
+    }
+    cntext.stroke();
+}
+
+// Draw grid lines along Y-axis
+for(i=0; i<=numy; i++) {
+    cntext.beginPath();
+    cntext.lineWidth = 1;
+    
+    // If line represents X-axis draw in different color
+    if(i == y_dist_grid_lines) 
+        cntext.strokeStyle = "#000000";
+    else
+        cntext.strokeStyle = "#e9e9e9";
+
+    if(i == numy) {
+        cntext.moveTo(grdsize*i, 0);
+        cntext.lineTo(grdsize*i, window.cvs_height);
+    }
+    else {
+        cntext.moveTo(grdsize*i+0.5, 0);
+        cntext.lineTo(grdsize*i+0.5, cvs_height);
+    }
+    
+    cntext.stroke();
+}
+
+// Translate to the new origin. Now Y-axis of the canvas is opposite to the Y-axis of the graph. So the y-coordinate of each element will be negative of the actual
+cntext.translate(y_dist_grid_lines*grdsize, x_dist_grid_lines*grdsize);
+
+// Ticks marks along the positive X-axis
+for(i=1; i<(numy - y_dist_grid_lines); i++) {
+    cntext.beginPath();
+    cntext.lineWidth = 1;
+    cntext.strokeStyle = "#000000";
+
+    // Draw a tick mark 6px long (-3 to 3)
+    cntext.moveTo(grdsize*i+0.5, -3);
+    cntext.lineTo(grdsize*i+0.5, 3);
+    cntext.stroke();
+
+    // Text value at that point
+    cntext.font = '9px Arial';
+    cntext.textAlign = 'start';
+    cntext.fillText(x_start_point.number*i + x_start_point.suffix, grdsize*i-2, 15);
+}
+
+// Ticks marks along the negative X-axis
+for(i=1; i<y_dist_grid_lines; i++) {
+    cntext.beginPath();
+    cntext.lineWidth = 1;
+    cntext.strokeStyle = "#000000";
+
+    // Draw a tick mark 6px long (-3 to 3)
+    cntext.moveTo(-grdsize*i+0.5, -3);
+    cntext.lineTo(-grdsize*i+0.5, 3);
+    cntext.stroke();
+
+    // Text value at that point
+    cntext.font = '9px Arial';
+    cntext.textAlign = 'end';
+    cntext.fillText(-x_start_point.number*i + x_start_point.suffix, -grdsize*i+3, 15);
+}
+
+// Ticks marks along the positive Y-axis
+// Positive Y-axis of graph is negative Y-axis of the canvas
+for(i=1; i<(numx - x_dist_grid_lines); i++) {
+    cntext.beginPath();
+    cntext.lineWidth = 1;
+    cntext.strokeStyle = "#000000";
+
+    // Draw a tick mark 6px long (-3 to 3)
+    cntext.moveTo(-3, grdsize*i+0.5);
+    cntext.lineTo(3, grdsize*i+0.5);
+    cntext.stroke();
+
+    // Text value at that point
+    cntext.font = '9px Arial';
+    cntext.textAlign = 'start';
+    cntext.fillText(y_start_point.number*i + y_start_point.suffix, 8, -grdsize*i+3);
+}
+
+// Ticks marks along the negative Y-axis
+// Negative Y-axis of graph is positive Y-axis of the canvas
+for(i=1; i<(x_dist_grid_lines); i++) {
+    cntext.beginPath();
+    cntext.lineWidth = 1;
+    cntext.strokeStyle = "#000000";
+
+    // Draw a tick mark 6px long (-3 to 3)
+    cntext.moveTo(-3, -grdsize*i+0.5);
+    cntext.lineTo(3, -grdsize*i+0.5);
+    cntext.stroke();
+
+    // Text value at that point
+    cntext.font = '9px Arial';
+    cntext.textAlign = 'start';
+    cntext.fillText(-y_start_point.number*i + y_start_point.suffix, 8, grdsize*i+3);
+}
+    
+
+
+
+function drawCoordnts(x,y,bg){
+    var ptSize = 3; // Change according to the size of the point.
+   
+    cntext.fillStyle = bg; // Red color
+
+    cntext.beginPath(); //Start path
+    cntext.arc(x, y, ptSize, 0, Math.PI * 2, true); // Draw a point using the arc function of the canvas with a point structure.
+    cntext.fill(); // Close the path and fill.
+}
+
 
   
 var grdsze = 12;
