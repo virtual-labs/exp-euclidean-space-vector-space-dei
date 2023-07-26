@@ -8,7 +8,7 @@
 
 ### About the Experiment 
 
-Fill a brief description of this experiment here
+In this experiment, mathematical model for plane has been determined which leads to the understanding of Euclidean Space.
 
 <b>Name of Developer | <b> Prof. Gunjan Agrawal
 :--|:--|
