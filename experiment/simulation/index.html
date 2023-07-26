@@ -4,25 +4,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
-<title>Linear Algebra Virtual Lab</title>
 <link rel = "icon" href = "https://www.vlab.co.in/images/logo.jpg" type = "image/x-icon">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <style type="text/css">
-	/* container */
+	
 .responsive-three-column-grid {
     display:block;
     float: center;
     margin-top: 0;
 }
 
-/* columns */
 .responsive-three-column-grid > * {
     padding:.1rem 1rem;
     margin: 0.5rem;
 }
 
-/* tablet breakpoint */
 @media (min-width:768px) {
     .responsive-three-column-grid {
         display: grid;
@@ -104,7 +101,6 @@ canvas {
 }
 
 input{
-    /*background-color:#f5b7b1;*/
     background-color: #edbb99;
     align-content: center;
     text-align: center;
@@ -147,14 +143,12 @@ p{
 <body>
     
     <p style="float: center; align-content:right;">
-<a href="https://virtual-labs.github.io/exp-euclidean-space-dei/index.html" class="previous">&laquo; Home</a>
-<a href="operations.html" class="next" >Next &raquo;</a></p><br><br><br>
+        <a href="./" class="previous">&laquo; Home</a>
+        <a href="./simulation/operations.html" class="next" >Next &raquo;</a>
+    </p>
+    <br><br><br>
     <h1 class="exphead">n-Dimensional Euclidean Space</h1>
-
-    <div class="intro">
-        <p>NOTE: Even if you are familiar with any of the notions explained here, you should not skip those steps, as these are necessary for the desired understanding.</p>
-    </div>
-    <h2 class="linkhead">Link(One-to-One Correspondence) Between Plane, R<sup>2</sup> and Vectors At Origin</h2>
+    <h2 class="linkhead">Link (One-to-One Correspondence) between Plane, R<sup>2</sup> and Vectors at Origin</h2>
 	<div class="responsive-three-column-grid">
     
     <div class="col1" style="background-color:#fbeee6;">
@@ -190,7 +184,9 @@ p{
     <h3 class="boxhead" style="color:firebrick; background-color: rgb(255,255,179); text-align: center; font-size: 25px;">MATH MODEL of Plane</h3>
     <p style="font-weight: bold; font-size: 24px;">R<sup>2</sup> = {(x , y) | x , y &isin; R}</p>
 </div>
-
+<p style="float: center; align-content:right;">
+<a href="./" class="previous">&laquo; Home</a>
+<a href="./simulation/operations.html" class="next" >Next &raquo;</a></p>
 </body>
 
 
@@ -203,8 +199,6 @@ var x_axis_starting_point = { number: 1, suffix: '' };
 var y_axis_starting_point = { number: 1, suffix: '' };
 
 var canvas = document.getElementById("my-canvas");
-//canvas.setAttribute("style", "position: absolute; x:0; y:0;");
-//document.body.appendChild(canvas);
 
 var ctx = canvas.getContext("2d");
 
@@ -213,7 +207,7 @@ var canvas_height = canvas.height;
 
 var num_lines_x = Math.floor(canvas_width/grid_size);
 var num_lines_y = Math.floor(canvas_height/grid_size);
-
+        
 // Draw grid lines along X-axis
 for(var i=0; i<=num_lines_x; i++) {
     ctx.beginPath();

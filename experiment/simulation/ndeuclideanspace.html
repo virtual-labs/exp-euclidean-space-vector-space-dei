@@ -24,6 +24,28 @@ body, html {
   margin-bottom: 0.2rem;
   margin-top: 0.5rem;
 }
+
+.responsive-two-column-grid {
+    display:block;
+    float: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.responsive-two-column-grid > * {
+    padding:1rem;
+    margin: 0.2rem;
+    background-color: silver;
+    margin-bottom: 0;
+}
+
+@media (min-width:768px) {
+    .responsive-two-column-grid {
+        display: grid;
+        grid-template-columns: .35fr .75fr;
+    }
+} 
+
 .responsive-three-column-grid {
     display:block;
     float: center;
@@ -70,22 +92,6 @@ body, html {
   display: none;
   padding: 70px 20px 18px 20px;
 }
-/*a{
-  display:block;
-  align-content: center;
-  text-align: center;
-  font-style:bold italic;
-  font-size: 25px;
-    color: blueviolet;
-  background-color: yellow;
-    text-decoration: none;
-    padding: 8px 16px;
-}
-
-a:hover {
-  background-color: #ddd;
-  color: black;
-}*/
 
 .next{
     background-color: #04AA6D;
@@ -151,8 +157,8 @@ a{
 </style>
 </head>
 <body>
-  <a href="./operations.html" class="previous">&laquo; Previous</a>
-<a href="https://virtual-labs.github.io/exp-euclidean-space-dei/index.html" class="next">Home &raquo;</a>
+  <a href="./simulation/operations.html" class="previous">&laquo; Previous</a>
+<a href="./" class="next">Home &raquo;</a>
 <br><br><br>
 <h1> n-Dimensional Euclidean Space as a Vector Space</h1>
 
@@ -179,15 +185,12 @@ a{
     </div>
 
   <div class="column" style="background-color:#fbeee6;">
-    <input type="submit" id="model1" style="color:darkgreen; font-size: 20px; font-weight: bold; margin:0.5rem; padding:5px; text-decoration: underline; background-color:transparent; border:0px solid transparent;" value="MATH MODEL" onclick="modelone('model1')">
-    <p id='displayonemathmodel' style="color:purple; font-size:20px;"></p>
-    <p id='displayoneoperation' style="color:black; font-size:18px;"></p>
-    <p id='displayonesystem' style="color:blue; font-size:20px; font-weight: bold;"></p>
+    <h3 style="color:darkgreen;">MATH MODEL</h3>
+
+    <p style=" font-size:20px;"><span style="color:purple;">R = set of real numbers.</span><br><br> <b>Operations:</b> <br><br> 1. Addition: x + y ; x , y &isin; R <br><br> 2. Scalar Multiplication: &alpha; . x ; x &isin; R</p>
+
     </div>
 </div>
-<div class="statement" style="background-color: #fff9c4; font-size: 20px; text-align:center;">
-    <p>-- Practice operations in R as you have done for R<sup>2</sup> --</p>
-  </div>
 </div>
 
 <div id="2d" class="tabcontent">
@@ -208,17 +211,13 @@ a{
     </div>
 
   <div class="column" style="background-color:#fbeee6;">
-    <input type="submit" id="model2" style="color:darkgreen; font-size: 20px; font-weight: bold; margin:0.5rem; padding:5px; text-decoration: underline; background-color:transparent; border:0px solid transparent;" value="MATH MODEL" onclick="modeltwo('model2')">
-    <p id='displaytwomathmodel' style="color:purple; font-size:20px;"></p>
-    <p id='displaytwooperation' style="color:black; font-size:18px;"></p>
-    <p id='displaytwosystem' style="color:blue; font-size:20px; font-weight: bold;"></p>
+    <h3 style="color:darkgreen;">MATH MODEL</h3>
+    <p style="font-size:20px;"><span style="color:purple;">R<sup>2</sup> = {(x, y) : x, y &isin; R} </span><BR><BR>
+      <b>Operations:</b> <br><br> 1. Addition: (x<sub>1</sub> , x<sub>2</sub> ) + (y<sub>1</sub> , y<sub>2</sub>) = (x<sub>1</sub> + y<sub>1</sub> , x<sub>2</sub> + y<sub>2</sub>) ; x<sub>1</sub> , x<sub>2</sub> , y<sub>1</sub> , y<sub>2</sub> &isin; R <br> <br>2. Scalar Multiplication: &alpha; . (x<sub>1</sub> , y<sub>1</sub>) = (&alpha; x<sub>1</sub> , &alpha; y<sub>1</sub>) ; x<sub>1</sub> , y<sub>1</sub> &isin; R</p>
     <br>
     </div>
   
 </div>
-<div class="statement" style="background-color: #fff9c4; font-size: 20px; text-align:center;">
-    <p>-- You have already practiced operations in R<sup>2</sup> in detail in previous pages --</p>
-  </div>
 </div>
 
 <div id="3d" class="tabcontent">
@@ -235,31 +234,23 @@ a{
     <input type="submit" id='button5' onclick="threedspaceyes('button5')" value="YES">&nbsp; / 
     <input type="submit" id='button6' onclick="threedspaceno('button6')" value="NO"><br><br>
     <div id="display3dimage">
-      <!--<img src="https://i.imgur.com/S1jMGq4.png" alt="3-D space" width=260vw height=250vh>-->
-      <!--<img src="/vlabs project/threeaxis.jpg" alt="3-D space" width=260vw height=250vh>-->
+      
     </div>
   </div>
 
   <div class="column" style="background-color:#fbeee6;">
-    <input type="submit" id="model3" style="color:darkgreen; font-size: 20px; font-weight: bold; margin:0.5rem; padding:5px; text-decoration: underline; background-color:transparent; border:0px solid transparent;" value="MATH MODEL" onclick="modelthree('model3')">
-    <p id='displaythreemathmodel' style="color:purple; font-size:20px;"></p>
-    <p id='displaythreeoperation' style="color:black; font-size:18px;"></p>
-    <p id='displaythreesystem' style="color:blue; font-size:20px; font-weight:bold;"></p>
+    <h3 style="color:darkgreen;">MATH MODEL</h3>
+    <p style=" font-size:20px;"><span style="color:purple;">R<sup>3</sup> = {(x, y, z) : x, y, z &isin; R}</span><br><br>
+      <b>Operations:</b> <br><br> 1. Addition: (x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub>) + (y<sub>1</sub> , y<sub>2</sub> , y<sub>3</sub>) = (x<sub>1</sub> + y<sub>1</sub> , x<sub>2</sub> + y<sub>2</sub> , x<sub>3</sub> + y<sub>3</sub>) ; x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , y<sub>1</sub> , y<sub>2</sub> , y<sub>3</sub> &isin; R <br> <br>2. Scalar Multiplication: &alpha; . (x<sub>1</sub> , y<sub>1</sub> , z<sub>1</sub>) = (&alpha; x<sub>1</sub> , &alpha; y<sub>1</sub> , &alpha; z<sub>1</sub>) ; x<sub>1</sub> , y<sub>1</sub> , z<sub>1</sub> &isin; R </p>
     <br>
     </div>
 </div>
-<div class="statement" style="background-color: #fff9c4; font-size: 20px; text-align:center;">
-    <p>-- Practice operations in R<sup>3</sup> as you have done for R<sup>2</sup> --</p>
-  </div>
+
 </div>
 
 <div id="nd" class="tabcontent">
-<div class="responsive-three-column-grid">
-  <div class="column" style="background-color:#fbeee6;">
-    <h3 style="color:indigo;"> UNDERSTANDING</h3>
-    <p>n-dimensional denotes the point in R<sup>n</sup>.<br>It is the system
-(R<sup>n</sup> ,+, .) together with R, where <br>R<sup>n</sup> ={(x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , …, x<sub>n</sub> ): x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , …, x<sub>n</sub> &isin; R}.</p>
-  </div>
+<div class="responsive-two-column-grid">
+  
   
   <div class="column" style="background-color:#fbeee6;">
     <h3 style="color:maroon;">GEOMETRIC VISUALIZATION</h3>
@@ -270,25 +261,20 @@ a{
     </div>
 
   <div class="column" style="background-color:#fbeee6;">
-    <input type="submit" id="modeln" style="color:darkgreen; font-size: 20px; font-weight: bold; margin:0.5rem; padding:5px; text-decoration: underline;background-color:transparent; border:0px solid transparent;" value="MATH MODEL" onclick="modeln('modeln')">
-    <h4>Can it be interpreted mathematically?</h4>
-    <input type="submit" id='button9' onclick="ndspacemathyes('button9')" value="YES">&nbsp; / 
-    <input type="submit" id='button0' onclick="ndspacemathno('button0')" value="NO"><br>
-    <p id='displaynmathmodel' style="color:purple; font-size:18px;"></p>
-    <p id='displaynoperation' style="color:black; font-size:16px;"></p>
-    <p id='displaynsystem' style="color:blue; font-size:18px; font-weight:bold;"></p>
+    <h3 style="color:darkgreen;">MATH MODEL</h3>
+    <p style="font-size:20px;"><span style="color:purple;">R<sup>n</sup> = {(x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub>) : x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub> &isin; R}</span><br><br>
+      <b>Operations:</b> <br><br> 1. Addition: (x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub>) + (y<sub>1</sub> , y<sub>2</sub> , y<sub>3</sub> , ... , y<sub>n</sub>) = (x<sub>1</sub> + y<sub>1</sub> , x<sub>2</sub> + y<sub>2</sub> , x<sub>3</sub> + y<sub>3</sub> + ... + x<sub>n</sub> + y<sub>n</sub> ) ; x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub> , y<sub>1</sub> , y<sub>2</sub> , y<sub>3</sub> , ... , y<sub>n</sub> &isin; R <br> <br>2. Scalar Multiplication: &alpha; . (x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub>) = (&alpha;x<sub>1</sub> , &alpha;x<sub>2</sub> , &alpha;x<sub>3</sub> , ... , &alpha;x<sub>n</sub>) ; x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub> &isin; R</p>
     </div>
 </div>
-<div class="statement" style="background-color: #fff9c4; font-size: 20px; text-align:center;">
-    <p>-- Practice operations in R<sup>n</sup> as you have done for R<sup>2</sup> --</p>
-</div>
+
 </div>
 <div class="vectorspace">
 
   <h3 style="color:#eafaf1; background-color:darkgreen; text-align:center; font-size:25px;">Vector Space</h3>
-  <p>Operations + and . in R<sup>n</sup> satisfy some "interesting" properties. This motivates to define the system (V, +, .) together with F = R or C, a vector space over F if it satisfies such "interesting" properties, where V is a non-empty set.</p>
+  <p style="text-align: center;">System (R<sup>n</sup>, +, .) together with R is denoted by R<sup>n</sup> and is a vector space over R (&#8757; it satisfies some interesting properties).</p>
   </div>
-
+  <a href="./simulation/operations.html" class="previous">&laquo; Previous</a>
+  <a href="./" class="next">Home &raquo;</a>
 </body>
 <script>
 function openPage(pageName,elmnt,color) {
@@ -304,18 +290,11 @@ function openPage(pageName,elmnt,color) {
   document.getElementById(pageName).style.display = "block";
   elmnt.style.backgroundColor = color;
 }
-  function modelone(){
-    document.getElementById('displayonemathmodel').innerHTML = ("R = set of real numbers");
-    document.getElementById('displayonesystem').innerHTML = ("System (R, +, .) together with R is denoted by R itself and is a vector space over R")
-    document.getElementById('displayoneoperation').innerHTML = ("<b>Operations:</b> <br><br> 1. Addition: x + y ; x , y &isin; R <br><br> 2. Scalar Multiplication: &alpha; . x ; x &isin; R ")
-  }
+  
 
   function onedspaceyes(btn1){
     alert('Correct!')
-    document.getElementById('displayonemathmodel').innerHTML = ("R = set of real numbers");
-    document.getElementById('displayonesystem').innerHTML = ("System (R, +, .) together with R is denoted by R itself and is a vector space over R")
-    document.getElementById('displayoneoperation').innerHTML = ("<b>Operations:</b> <br><br> 1. Addition: x + y ; x , y &isin; R <br><br> 2. Scalar Multiplication: &alpha; . x ; x &isin; R ")
-    document.getElementById('display1dimage').innerHTML='CORRECT! <br><br> <img src="./images/1d graph.jpg" alt="2-D space" width=260vw height=250vh/>';
+    document.getElementById('display1dimage').innerHTML='CORRECT! <br><br> <img src="./images/1d graph.jpg" alt="2-D space" width=220vw height=200vh/>';
     var count=1;
     var property = document.getElementById(btn1);
     if (count == 0){
@@ -330,10 +309,7 @@ function openPage(pageName,elmnt,color) {
 
   function onedspaceno(btn2){
     alert('Incorrect! It can be visualized.')
-    document.getElementById('displayonemathmodel').innerHTML = ("R = set of real numbers");
-    document.getElementById('displayonesystem').innerHTML = ("System (R, +, .) together with R is denoted by R itself and is a vector space over R")
-    document.getElementById('displayoneoperation').innerHTML = ("<b>Operations:</b> <br><br> 1. Addition: x + y ; x , y &isin; R <br><br> 2. Scalar Multiplication: &alpha; . x ; x &isin; R ")
-    document.getElementById('display1dimage').innerHTML='INCORRECT! <br> It can be visualized.<br><br><img src="./images/1d graph.jpg" alt="2-D space" width=260vw height=250vh/>';
+    document.getElementById('display1dimage').innerHTML='INCORRECT! <br> It can be visualized.<br><br><img src="./images/1d graph.jpg" alt="2-D space" width=220vw height=200vh/>';
     var count=1;
     var property = document.getElementById(btn2);
     if (count == 0){
@@ -347,18 +323,9 @@ function openPage(pageName,elmnt,color) {
     document.getElementById(btn1).style.backgroundColor = "#FFFFFF";
   }
 
-  function modeltwo(){
-    document.getElementById('displaytwomathmodel').innerHTML = ("R<sup>2</sup> = {(x, y) : x, y &isin; R}");
-    document.getElementById('displaytwosystem').innerHTML = ("System (R<sup>2</sup>, +, .) together with R is denoted by R<sup>2</sup> and is a vector space over R")
-    document.getElementById('displaytwooperation').innerHTML = ("<b>Operations:</b> <br><br> 1. Addition: (x<sub>1</sub> , x<sub>2</sub> ) + (y<sub>1</sub> , y<sub>2</sub>) = (x<sub>1</sub> + y<sub>1</sub> , x<sub>2</sub> + y<sub>2</sub>) ; x<sub>1</sub> , x<sub>2</sub> , y<sub>1</sub> , y<sub>2</sub> &isin; R <br> <br>2. Scalar Multiplication: &alpha; . (x<sub>1</sub> , y<sub>1</sub>) = (&alpha; x<sub>1</sub> , &alpha; y<sub>1</sub>) ; x<sub>1</sub> , y<sub>1</sub> &isin; R ")
-
-  }
 
   function twodspaceyes(btn3){
     alert('Correct!')
-    document.getElementById('displaytwomathmodel').innerHTML = ("R<sup>2</sup> = {(x, y) : x, y &isin; R}");
-    document.getElementById('displaytwosystem').innerHTML = ("System (R<sup>2</sup>, +, .) together with R is denoted by R<sup>2</sup> and is a vector space over R")
-    document.getElementById('displaytwooperation').innerHTML = ("<b>Operations:</b> <br><br> 1. Addition: (x<sub>1</sub> , x<sub>2</sub> ) + (y<sub>1</sub> , y<sub>2</sub>) = (x<sub>1</sub> + y<sub>1</sub> , x<sub>2</sub> + y<sub>2</sub>) ; x<sub>1</sub> , x<sub>2</sub> , y<sub>1</sub> , y<sub>2</sub> &isin; R <br> <br>2. Scalar Multiplication: &alpha; . (x<sub>1</sub> , y<sub>1</sub>) = (&alpha; x<sub>1</sub> , &alpha; y<sub>1</sub>) ; x<sub>1</sub> , y<sub>1</sub> &isin; R ")
 
     document.getElementById('display2dimage').innerHTML='CORRECT! <br> <br> <img src="./images/twoaxisgraph.jpg" alt="2-D space" width=260vw height=250vh/>';
     var count=1;
@@ -374,9 +341,6 @@ function openPage(pageName,elmnt,color) {
   }
   function twodspaceno(btn4){
     alert('Incorrect! It can be visualized.')
-    document.getElementById('displaytwomathmodel').innerHTML = ("R<sup>2</sup> = {(x, y) : x, y &isin; R}");
-    document.getElementById('displaytwosystem').innerHTML = ("System (R<sup>2</sup>, +, .) together with R is denoted by R<sup>2</sup> and is a vector space over R")
-    document.getElementById('displaytwooperation').innerHTML = ("<b>Operations:</b> <br><br> 1. Addition: (x<sub>1</sub> , x<sub>2</sub> ) + (y<sub>1</sub> , y<sub>2</sub>) = (x<sub>1</sub> + y<sub>1</sub> , x<sub>2</sub> + y<sub>2</sub>) ; x<sub>1</sub> , x<sub>2</sub> , y<sub>1</sub> , y<sub>2</sub> &isin; R <br> <br>2. Scalar Multiplication: &alpha; . (x<sub>1</sub> , y<sub>1</sub>) = (&alpha; x<sub>1</sub> , &alpha; y<sub>1</sub>) ; x<sub>1</sub> , y<sub>1</sub> &isin; R ")
     document.getElementById('display2dimage').innerHTML='INCORRECT! <br> It can be visualized.<br><br> <img src="./images/twoaxisgraph.jpg" alt="2-D space" width=260vw height=250vh/>';
     var count=1;
     var property = document.getElementById(btn4);
@@ -390,17 +354,9 @@ function openPage(pageName,elmnt,color) {
     }
   }
 
-  function modelthree(){
-    document.getElementById('displaythreemathmodel').innerHTML = ("R<sup>3</sup> = {(x, y, z) : x, y, z &isin; R}");
-    document.getElementById('displaythreesystem').innerHTML = ("System (R<sup>3</sup>, +, .) together with R is denoted by R<sup>3</sup> and is a vector space over R")
-    document.getElementById('displaythreeoperation').innerHTML = ("<b>Operations:</b> <br><br> 1. Addition: (x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub>) + (y<sub>1</sub> , y<sub>2</sub> , y<sub>3</sub>) = (x<sub>1</sub> + y<sub>1</sub> , x<sub>2</sub> + y<sub>2</sub> , x<sub>3</sub> + y<sub>3</sub>) ; x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , y<sub>1</sub> , y<sub>2</sub> , y<sub>3</sub> &isin; R <br> <br>2. Scalar Multiplication: &alpha; . (x<sub>1</sub> , y<sub>1</sub> , z<sub>1</sub>) = (&alpha; x<sub>1</sub> , &alpha; y<sub>1</sub> , &alpha; z<sub>1</sub>) ; x<sub>1</sub> , y<sub>1</sub> , z<sub>1</sub> &isin; R ")
-  }
 
   function threedspaceyes(btn5){
     alert('Correct!')
-    document.getElementById('displaythreemathmodel').innerHTML = ("R<sup>3</sup> = {(x, y, z) : x, y, z &isin; R}");
-    document.getElementById('displaythreesystem').innerHTML = ("System (R<sup>3</sup>, +, .) together with R is denoted by R<sup>3</sup> and is a vector space over R")
-    document.getElementById('displaythreeoperation').innerHTML = ("<b>Operations:</b> <br><br> 1. Addition: (x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub>) + (y<sub>1</sub> , y<sub>2</sub> , y<sub>3</sub>) = (x<sub>1</sub> + y<sub>1</sub> , x<sub>2</sub> + y<sub>2</sub> , x<sub>3</sub> + y<sub>3</sub>) ; x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , y<sub>1</sub> , y<sub>2</sub> , y<sub>3</sub> &isin; R <br> <br>2. Scalar Multiplication: &alpha; . (x<sub>1</sub> , y<sub>1</sub> , z<sub>1</sub>) = (&alpha; x<sub>1</sub> , &alpha; y<sub>1</sub> , &alpha; z<sub>1</sub>) ; x<sub>1</sub> , y<sub>1</sub> , z<sub>1</sub> &isin; R ")
 
     document.getElementById('display3dimage').innerHTML='CORRECT! <br> <br><img src="./images/threeaxisgraph.jpg" alt="3-D space" width=260vw height=250vh/>';
     var count=1;
@@ -416,9 +372,6 @@ function openPage(pageName,elmnt,color) {
   }
   function threedspaceno(btn6){
     alert('Incorrect! It can be visualized.')
-    document.getElementById('displaythreemathmodel').innerHTML = ("R<sup>3</sup> = {(x, y, z) : x, y, z &isin; R}");
-    document.getElementById('displaythreesystem').innerHTML = ("System (R<sup>3</sup>, +, .) together with R is denoted by R<sup>3</sup> and is a vector space over R")
-    document.getElementById('displaythreeoperation').innerHTML = ("<b>Operations:</b> <br><br> 1. Addition: (x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub>) + (y<sub>1</sub> , y<sub>2</sub> , y<sub>3</sub>) = (x<sub>1</sub> + y<sub>1</sub> , x<sub>2</sub> + y<sub>2</sub> , x<sub>3</sub> + y<sub>3</sub>) ; x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , y<sub>1</sub> , y<sub>2</sub> , y<sub>3</sub> &isin; R <br> <br>2. Scalar Multiplication: &alpha; . (x<sub>1</sub> , y<sub>1</sub> , z<sub>1</sub>) = (&alpha; x<sub>1</sub> , &alpha; y<sub>1</sub> , &alpha; z<sub>1</sub>) ; x<sub>1</sub> , y<sub>1</sub> , z<sub>1</sub> &isin; R ")
 
     document.getElementById('display3dimage').innerHTML='INCORRECT!<br> It can be visualized.<br><br> <img src="./images/threeaxisgraph.jpg" alt="3-D space" width=260vw height=250vh/>';
     var count=1;
@@ -463,44 +416,7 @@ function openPage(pageName,elmnt,color) {
     
   }
 
-  function modeln(){
-    document.getElementById('displaynmathmodel').innerHTML = ("Math model: <br>R<sup>n</sup> = {(x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub>) : x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub> &isin; R}")
-    document.getElementById('displaynsystem').innerHTML = ("System (R<sup>n</sup>, +, .) together with R is denoted by R<sup>n</sup> and is a vector space over R")
-    document.getElementById('displaynoperation').innerHTML = ("<b>Operations:</b> <br><br> 1. Addition: (x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub>) + (y<sub>1</sub> , y<sub>2</sub> , y<sub>3</sub> , ... , y<sub>n</sub>) = (x<sub>1</sub> + y<sub>1</sub> , x<sub>2</sub> + y<sub>2</sub> , x<sub>3</sub> + y<sub>3</sub> + ... + x<sub>n</sub> + y<sub>n</sub> ) ; x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub> , y<sub>1</sub> , y<sub>2</sub> , y<sub>3</sub> , ... , y<sub>n</sub> &isin; R <br> <br>2. Scalar Multiplication: &alpha; . (x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub>) = (&alpha;x<sub>1</sub> , &alpha;x<sub>2</sub> , &alpha;x<sub>3</sub> , ... , &alpha;x<sub>n</sub>) ; x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub> &isin; R")
-  }
 
-  function ndspacemathyes(btn9){
-    alert('Correct! It can be interpreted mathematically.')
-    document.getElementById('displaynmathmodel').innerHTML = ("CORRECT! <br>Math model: R<sup>n</sup> = {(x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub>) : x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub> &isin; R}")
-    document.getElementById('displaynsystem').innerHTML = ("System (R<sup>n</sup>, +, .) together with R is denoted by R<sup>n</sup> and is a vector space over R")
-    document.getElementById('displaynoperation').innerHTML = ("<b>Operations:</b> <br><br> 1. Addition: (x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub>) + (y<sub>1</sub> , y<sub>2</sub> , y<sub>3</sub> , ... , y<sub>n</sub>) = (x<sub>1</sub> + y<sub>1</sub> , x<sub>2</sub> + y<sub>2</sub> , x<sub>3</sub> + y<sub>3</sub> + ... + x<sub>n</sub> + y<sub>n</sub> ) ; x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub> , y<sub>1</sub> , y<sub>2</sub> , y<sub>3</sub> , ... , y<sub>n</sub> &isin; R <br> <br>2. Scalar Multiplication: &alpha; . (x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub>) = (&alpha;x<sub>1</sub> , &alpha;x<sub>2</sub> , &alpha;x<sub>3</sub> , ... , &alpha;x<sub>n</sub>) ; x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub> &isin; R")
-    var count=1;
-    var property = document.getElementById(btn9);
-    if (count == 0){
-        property.style.backgroundColor = "#FFFFFF"
-        count=1;        
-    }
-    else{
-        property.style.backgroundColor = "#0f0"
-        count=0;
-    }
-  }
-  function ndspacemathno(btn0){
-    alert('Incorrect! It can be interpreted mathematically.')
-    document.getElementById('displaynmathmodel').innerHTML = ("INCORRECT! <br>Math model: R<sup>n</sup> = {(x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub>) : x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub> &isin; R}")
-    document.getElementById('displaynsystem').innerHTML = ("System (R<sup>n</sup>, +, .) together with R is denoted by R<sup>n</sup> and is a vector space over R")
-    document.getElementById('displaynoperation').innerHTML = ("<b>Operations:</b> <br><br> 1. Addition: (x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub>) + (y<sub>1</sub> , y<sub>2</sub> , y<sub>3</sub> , ... , y<sub>n</sub>) = (x<sub>1</sub> + y<sub>1</sub> , x<sub>2</sub> + y<sub>2</sub> , x<sub>3</sub> + y<sub>3</sub> + ... + x<sub>n</sub> + y<sub>n</sub> ) ; x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub> , y<sub>1</sub> , y<sub>2</sub> , y<sub>3</sub> , ... , y<sub>n</sub> &isin; R <br> <br>2. Scalar Multiplication: &alpha; . (x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub>) = (&alpha;x<sub>1</sub> , &alpha;x<sub>2</sub> , &alpha;x<sub>3</sub> , ... , &alpha;x<sub>n</sub>) ; x<sub>1</sub> , x<sub>2</sub> , x<sub>3</sub> , ... , x<sub>n</sub> &isin; R")
-    var count=1;
-    var property = document.getElementById(btn0);
-    if (count == 0){
-        property.style.backgroundColor = "#FFFFFF"
-        count=1;        
-    }
-    else{
-        property.style.backgroundColor = "#f00"
-        count=0;
-    }
-  }
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
