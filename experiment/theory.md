@@ -1,5 +1,3 @@
-### Theory
-
 Let N and R denote the natural numbers and real numbers respectively.
 
 **1. 2-dimensional Euclidean Space:**
