@@ -2,14 +2,14 @@
 
 Let N and R denote the natural numbers and real numbers respectively.
 
-**1. Euclidean Space (2-dimensional):**
+**1. 2-dimensional Euclidean Space:**
  The system ( R<sup>2</sup> ,+ , . ) together with R is the 2-dimensional Euclidean space, where
 
 **(i)** R<sup>2</sup> = { (x , y) | (x , y) ∈ R} <br>
 **(ii)** + , called addition, is defined as <br>
-&emsp; (a , b) + (c , d) = ( a+c , b+d ) where a, b, c, d ∈ R <br>
+&emsp; (a , b) + (c , d) = ( a+c , b+d ); where a, b, c, d ∈ R <br>
 **(iii)** . , called scalar multiplication, is defined as <br> 
-&emsp; α . (a , b) = (α . a , α . b) where α is the scalar and a , b ∈ R . <br>
+&emsp; α . (a , b) = (α . a , α . b); where α is the scalar and a , b ∈ R . <br>
 
 Note that,
 
@@ -31,8 +31,8 @@ The one-to-one correspondence between the plane and R<sup>2</sup>, described abo
 **5. n-dimensional Euclidean Space:**
  It is the system ( R<sup>n</sup> , + , . ) together with R, where R<sup>n</sup> = {(x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... , x<sub>n</sub>) | x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... , x<sub>n</sub> ∈ R} and operations + and . called addition and scalar multiplication respectively are defined as:
 
-**(i)** {(x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... , x<sub>n</sub>) + (y<sub>1</sub>, y<sub>2</sub>, y<sub>3</sub>, ... , y<sub>n</sub>) = (x<sub>1</sub>+y<sub>1</sub> , x<sub>2</sub>+y<sub>2</sub> , ... , x<sub>n</sub>+y<sub>n</sub>)}, where x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... , x<sub>n</sub>, y<sub>1</sub>, y<sub>2</sub>, y<sub>3</sub>, ... , y<sub>n</sub> ∈ R <br>
-**(ii)** α . (x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... , x<sub>n</sub>) = (α.x<sub>1</sub>, α.x<sub>2</sub>, α.x<sub>3</sub>, ... , α.x<sub>n</sub>) where α, x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... , x<sub>n</sub> ∈ R
+**(i)** {(x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... , x<sub>n</sub>) + (y<sub>1</sub>, y<sub>2</sub>, y<sub>3</sub>, ... , y<sub>n</sub>) = (x<sub>1</sub>+y<sub>1</sub> , x<sub>2</sub>+y<sub>2</sub> , ... , x<sub>n</sub>+y<sub>n</sub>)}; where x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... , x<sub>n</sub>, y<sub>1</sub>, y<sub>2</sub>, y<sub>3</sub>, ... , y<sub>n</sub> ∈ R <br>
+**(ii)** α . (x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... , x<sub>n</sub>) = (α.x<sub>1</sub>, α.x<sub>2</sub>, α.x<sub>3</sub>, ... , α.x<sub>n</sub>); where α, x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... , x<sub>n</sub> ∈ R
 
 It can be geometrically visualised for 1≤n≤3 only. 
 
@@ -41,20 +41,20 @@ It can be geometrically visualised for 1≤n≤3 only.
 
 **For Addition:** <br>
 &emsp; **i.** For each pair of elements x, y ∈ V, there is a unique element x + y ∈ V <br> 
-&emsp; **ii.** Commutativity: x + y = y + x for all x, y ∈ V <br>
-&emsp; **iii.** Associativity: (x + y) + z = x + (y + z) for all x, y, z ∈ V <br>
-&emsp; **iv.** Additive identity: There exists an element O ∈ V s.t. x + O = x, for all x ∈ V.<br>
+&emsp; **ii.** Commutativity: x + y = y + x; for x, y ∈ V <br>
+&emsp; **iii.** Associativity: (x + y) + z = x + (y + z), for x, y, z ∈ V <br>
+&emsp; **iv.** Additive identity: There exists an element O ∈ V s.t. x + O = x, for x ∈ V.<br>
 &emsp;  &emsp; This O which is the additive identity of (V, +), is called the zero of V and is denoted by 0.<br>
 &emsp; **v.** Additive inverse: For every x ∈ V, there exists an element y ∈ V s.t. x + y = 0. This y is called the additive inverse of x and is denoted by -x.
 
 **For Scalar Multiplication:** <br>
 &emsp; **i.** For each x ∈ V and a ∈ F, there is a unique element a.x ∈ V <br>
-&emsp; **ii.** Associativity: (ab).x = a.(bx) = x.(ab) for all x ∈ V, for all a, b ∈ F. <br>
-&emsp; **iii.** 1.x = x.1 for all x ∈ V, where 1 ∈ F.
+&emsp; **ii.** Associativity: (ab).x = a.(bx) = x.(ab); for x ∈ V and a, b ∈ F. <br>
+&emsp; **iii.** 1.x = x.1 = x, for x ∈ V, where 1 is the additive identity of F.
 
 **For Addition and Scalar Multiplication:** <br>
-&emsp; **i.** Distributive: a.(x+y) = a.x + a.y for all x, y ∈ V, for all a ∈ F. <br> 
-&emsp; **ii.** Distributive: (a+b).x = a.x + b.x for all x ∈ V, for all a, b ∈ F. 
+&emsp; **i.** Distributive: a.(x+y) = a.x + a.y; for x, y ∈ V and a ∈ F. <br> 
+&emsp; **ii.** Distributive: (a+b).x = a.x + b.x; for x ∈ V and a, b ∈ F. 
 
 **NOTE:** The elements of F are called **scalars** and the elements of V are **vectors**. A vector space over F will be denoted by V.
 
