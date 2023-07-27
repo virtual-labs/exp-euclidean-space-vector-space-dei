@@ -18,7 +18,7 @@
             "difficulty": "beginner"
         },
         {
-            "question": "Which of the following represents an element R<sup>2</sup>?",
+            "question": "Which of the following is an element of R<sup>2</sup>?",
             "answers": {
                 "a": "( 3 , *i* ), where *i* is √(-1)",
                 "b": "[0 , 2]",
@@ -35,7 +35,7 @@
             "difficulty": "beginner"
         },
         {
-            "question": "Let A and B be the statements as given below: <br> A: π is a rational number <br> B: 1/0 is not a real number?",
+            "question": "Let A and B be the statements as given below : <br> A : π is a rational number <br> B : 1/0 is not a real number <br> Then",
             "answers": {
                 "a": "A is true, B is false",
                 "b": "A is false, B is true",
@@ -52,7 +52,7 @@
             "difficulty": "beginner"
         },
         {
-            "question": "Which of the following represents an element R<sup>3</sup>?",
+            "question": "Which of the following is an element of R<sup>3</sup>?",
             "answers": {
                 "a": "(π, *i*<sup>2</sup>, log(1))",
                 "b": "(3, 11, √(-2))",
