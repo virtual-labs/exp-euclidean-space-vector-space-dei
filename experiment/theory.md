@@ -51,8 +51,8 @@ It can be geometrically visualised for 1≤n≤3 only.
 &emsp; **iii.** 1.x = x.1 = x, for x ∈ V, where 1 is the additive identity of F.
 
 **Compatibility Conditions:** <br>
-&emsp; **i.** Distributive: a.(x+y) = a.x + a.y; for x, y ∈ V and a ∈ F. <br> 
-&emsp; **ii.** Distributive: (a+b).x = a.x + b.x; for x ∈ V and a, b ∈ F. 
+&emsp; **i.** Distributive Property 1: a.(x+y) = a.x + a.y; for x, y ∈ V and a ∈ F. <br> 
+&emsp; **ii.** Distributive Property 2: (a+b).x = a.x + b.x; for x ∈ V and a, b ∈ F. 
 
 **NOTE:** The elements of F are called **scalars** and the elements of V are **vectors**. A vector space over F will be denoted by V.
 
