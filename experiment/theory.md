@@ -5,9 +5,9 @@ Let N and R denote the natural numbers and real numbers respectively.
 
 **(i)** R<sup>2</sup> = { (x , y) | (x , y) ∈ R} <br>
 **(ii)** + , called addition, is defined as <br>
-&emsp; (a , b) + (c , d) = ( a+c , b+d ); where a, b, c, d ∈ R <br>
+&emsp; (a , b) + (c , d) = ( a+c , b+d ); where (a , b) and (c , d) ∈ R<sup>2</sup> <br>
 **(iii)** . , called scalar multiplication, is defined as <br> 
-&emsp; α . (a , b) = (α . a , α . b); where α is the scalar and a , b ∈ R . <br>
+&emsp; α . (a , b) = (α . a , α . b); where α ∈ R and (a , b) ∈ R<sup>2</sup> . <br>
 
 Note that,
 
@@ -29,8 +29,8 @@ The one-to-one correspondence between the plane and R<sup>2</sup>, described abo
 **5. n-dimensional Euclidean Space:**
  It is the system ( R<sup>n</sup> , + , . ) together with R, where R<sup>n</sup> = {(x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... , x<sub>n</sub>) | x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... , x<sub>n</sub> ∈ R} and operations + and . called addition and scalar multiplication respectively are defined as:
 
-**(i)** {(x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... , x<sub>n</sub>) + (y<sub>1</sub>, y<sub>2</sub>, y<sub>3</sub>, ... , y<sub>n</sub>) = (x<sub>1</sub>+y<sub>1</sub> , x<sub>2</sub>+y<sub>2</sub> , ... , x<sub>n</sub>+y<sub>n</sub>)}; where x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... , x<sub>n</sub>, y<sub>1</sub>, y<sub>2</sub>, y<sub>3</sub>, ... , y<sub>n</sub> ∈ R <br>
-**(ii)** α . (x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... , x<sub>n</sub>) = (α.x<sub>1</sub>, α.x<sub>2</sub>, α.x<sub>3</sub>, ... , α.x<sub>n</sub>); where α, x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... , x<sub>n</sub> ∈ R
+**(i)** {(x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... , x<sub>n</sub>) + (y<sub>1</sub>, y<sub>2</sub>, y<sub>3</sub>, ... , y<sub>n</sub>) = (x<sub>1</sub>+y<sub>1</sub> , x<sub>2</sub>+y<sub>2</sub> , ... , x<sub>n</sub>+y<sub>n</sub>)}; where (x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... , x<sub>n</sub>) , (y<sub>1</sub>, y<sub>2</sub>, y<sub>3</sub>, ... , y<sub>n</sub>) ∈ R<sup>n</sup> <br>
+**(ii)** α . (x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... , x<sub>n</sub>) = (α.x<sub>1</sub>, α.x<sub>2</sub>, α.x<sub>3</sub>, ... , α.x<sub>n</sub>); where α ∈ R and (x<sub>1</sub>, x<sub>2</sub>, x<sub>3</sub>, ... , x<sub>n</sub>) ∈ R<sup>n</sup>
 
 It can be geometrically visualised for 1≤n≤3 only. 
 
@@ -50,7 +50,7 @@ It can be geometrically visualised for 1≤n≤3 only.
 &emsp; **ii.** Associativity: (ab).x = a.(bx) = x.(ab); for x ∈ V and a, b ∈ F. <br>
 &emsp; **iii.** 1.x = x.1 = x, for x ∈ V, where 1 is the additive identity of F.
 
-**For Addition and Scalar Multiplication:** <br>
+**Compatibility Conditions:** <br>
 &emsp; **i.** Distributive: a.(x+y) = a.x + a.y; for x, y ∈ V and a ∈ F. <br> 
 &emsp; **ii.** Distributive: (a+b).x = a.x + b.x; for x ∈ V and a, b ∈ F. 
 
@@ -70,5 +70,3 @@ For v, w ∈ V and α ∈ F,
 
 **9. Significance**
 The study of n-dimensional Euclidean space has enlightened research in many broad areas of science over the period of time. n-dimensional spaces have since become one of the foundations for formally expressing modern mathematics and physics.
-
-*NOTE: Even if you are familiar with any of the notions explained here, you should not skip those steps, as these are necessary for the desired understanding.*
