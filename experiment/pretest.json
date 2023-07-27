@@ -20,7 +20,7 @@
         {
             "question": "Which of the following is an element of R<sup>2</sup>?",
             "answers": {
-                "a": "( 3 , *i* ), where *i* is √(-1)",
+                "a": "( 3 , i ), where i is √(-1)",
                 "b": "[0 , 2]",
                 "c": "{5 , 0}",
                 "d": "None"
