@@ -124,7 +124,14 @@ form{
   display: none;
   padding: 40px 10px;
 }
-
+.subbtn{
+    cursor: pointer;
+    background-color: #04AA6D;
+    border: none;
+    color:white;
+    width: 4rem;
+    height:1.2rem;
+}
 </style>
 </head>
 
@@ -155,8 +162,8 @@ form{
   <input type="text" id="c_cord" name="c_cord"><br><br>
   <label for="d_cord">d:</label>          
   <input type="text" id="d_cord" name="d_cord"><br><br>
-  <button type="button" onclick="addition();">Submit</button><br/><br>
-  <label style="color:blue;">Coordinate values: </label>
+  <button class="subbtn" type="button" onclick="addition();">Submit</button><br/><br>
+  <label style="color:#b22222;">Coordinate values: </label>
   <p id='displayab' style="color:green;"></p>
   <p id='displaycd' style="color:green;"></p>
     <p id='displayabcd' style="color:deeppink;"></p>
@@ -168,7 +175,7 @@ form{
   	<h3 style="color:maroon;"> Location of Points and Sum</h3>
     <canvas id="graphcanvas" width="250vw" height="250vh"></canvas>
     <br>
-    <p id="note1" style="color:blue;"></p>
+    <p id="note1" style="color:#b22222;"></p>
   </div>
 
   <div class="col3" style="background-color:#fbeee6;">
@@ -176,7 +183,7 @@ form{
     <canvas id="my-canvas" width="250vw" height="250vh"></canvas>
 
     <br>
-    <p id="note2" style="color:blue;"></p>
+    <p id="note2" style="color:#b22222;"></p>
   </div>
 </div>
 </div>
@@ -193,7 +200,7 @@ form{
   <label for="n_cord">n:</label>
   <input type="text" id="n_cord" name="n_cord"><br><br>
   <button type="button" onclick="multiplication();">Submit</button><br/><br>
-  <label style="color:blue;">Coordinate values: </label>
+  <label style="color:#b22222;">Coordinate values: </label>
   <p id='displayal' style="color:green;"></p>
   <p id='displaymn' style="color:green;"></p>
     <p id='displayalmn' style="font-style:bold; color:deeppink;"></p>
@@ -205,14 +212,14 @@ form{
   	<h3 style="color:maroon;">Location of Points and Scalar Multiplication</h3>
     <canvas id="grphcanvas" width="250vw" height="250vh"></canvas>
     <br>
-    <p id="note3" style="color:blue;"></p>
+    <p id="note3" style="color:#b22222;"></p>
   </div>
 
   <div class="col3" style="background-color:#fbeee6;">
   	<h3 style="color:green;">Vector Representation of Points and Scalar Multiplication</h3>
     <canvas id="grphcnvs" width="250vw" height="250vh"></canvas>
     <br>
-    <p id="note4" style="color:blue;"></p>
+    <p id="note4" style="color:#b22222;"></p>
   </div>
 </div>
 
