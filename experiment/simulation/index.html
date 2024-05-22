@@ -354,7 +354,7 @@ const coords = document.querySelector('.display-coords');
 const getCoords = (event) => {
   const container = cnvs.getBoundingClientRect();
   const x1 = (event.clientX - 2*cnvs.offsetLeft)/25;
-  const y1 = (event.clientY - 0.5*cnvs.offsetTop)/25;
+  const y1 = (event.clientY - 1.35*cnvs.offsetTop)/25;
 
   //coords.textContent = 'Picked a Point P. Now, you can see the coordinates of picked point.'
   //coords.textContent = `(${x1}, ${y1})`;
