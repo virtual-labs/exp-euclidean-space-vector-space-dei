@@ -56,17 +56,19 @@ It can be geometrically visualised for 1≤n≤3 only.
 
 **NOTE:** The elements of F are called **scalars** and the elements of V are **vectors**. A vector space over F will be denoted by V.
 
-**7. Example**
-(R<sup>n</sup>, + , .) is a vector space over R, where n ∈ N. It will be denoted by R<sup>n</sup>. The zero of this vector space is 0 ≡ (0, 0, ..., 0). Thus elements of R<sup>n</sup> are vectors and elements of R are scalars. In the particular case when n=1, elements of R are both vectors and scalars.
+**7. Example** <br>
+&emsp; **i.** The system (R<sup>n</sup>, +, .) is a vector space over R, where addition and scalar multiplication are described above. The zero of this vector space is 0≡(0, 0, 0, …, 0). Thus elements of Rn are vectors and elements of R are scalars. In the particular case when n=1, elements of R are both vectors and scalars. <br>
+&emsp; **ii.** The system (M<sup>2x2</sup>, +, .) is a vector space over R, where M<sup>2x2</sup>={ a, b, c, dR}, operation addition is defined to be += and the operation scalar multiplication is defined to be α.=. The zero of this vector space is 0≡.
 
 **8. Properties**
-For v, w ∈ V and α ∈ F,
+Let V be a vector space over R. For v, w ∈ V and α ∈ F,
 
 &emsp; **A.** 0.v = 0 <br>
 &emsp;&emsp;   (0 on the left side is the zero of F and on the right side it is the zero of V) <br>
 &emsp; **B.** α.v = 0 implies α = 0 or v = 0<br>
 &emsp;&emsp;   (-1).x = -x, x ∈ V, -1 ∈ F<br> 
-&emsp; **C.** α.v = α.w and α ≠ 0 implies v = w.
+&emsp; **C.** α.v = α.w and α ≠ 0 implies v = w.<br>
+&emsp; **D.** Notice that v.w and v.α are not defined.
 
 **9. Significance**
 The study of n-dimensional Euclidean space has enlightened research in many broad areas of science over the period of time. n-dimensional spaces have since become one of the foundations for formally expressing modern mathematics and physics.
