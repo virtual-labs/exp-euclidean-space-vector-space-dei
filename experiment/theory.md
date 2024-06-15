@@ -58,7 +58,12 @@ It can be geometrically visualised for 1≤n≤3 only.
 
 **7. Example** <br>
 &emsp; **i.** The system (R<sup>n</sup>, +, .) is a vector space over R, where addition and scalar multiplication are described above. The zero of this vector space is 0≡(0, 0, 0, …, 0). Thus elements of Rn are vectors and elements of R are scalars. In the particular case when n=1, elements of R are both vectors and scalars. <br>
-&emsp; **ii.** The system (M<sup>2x2</sup>, +, .) is a vector space over R, where M<sup>2x2</sup>={ a, b, c, dR}, operation addition is defined to be += and the operation scalar multiplication is defined to be α.=. The zero of this vector space is 0≡.
+&emsp; **ii.** The system (M<sup>2x2</sup>, +, .) is a vector space over R, where M<sup>2x2</sup>={ a, b, c, dR}, operation addition is defined to be += and the operation scalar multiplication is defined to be α.=. The zero of this vector space is 0≡.<br>
+The matrix $\begin{bmatrix}
+ 1 & 2 \\
+ 3 & 4
+\end{bmatrix}$ is invertible.
+
 
 **8. Properties**
 Let V be a vector space over R. For v, w ∈ V and α ∈ F,
