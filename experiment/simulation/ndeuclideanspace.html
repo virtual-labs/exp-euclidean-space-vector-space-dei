@@ -145,9 +145,8 @@ input:hover{
   background-color: #e8f5e9;
   border: 2px solid darkgreen;
   padding: 1rem;
-  margin-top: 0;
-  margin: 1rem;
-}
+  margin: 80px 10px;
+  
 a{
   text-decoration: none;
   color:white;
@@ -164,13 +163,20 @@ input{
 <a href="./" class="next">Home &raquo;</a>
 <br><br><br>
 <h1> n-Dimensional Euclidean Space as a Vector Space</h1>
+<div class="btnsdiv">
+<button class="tablink" style="background-color: green;" id="btn1" onclick=forn1()>For n=1</button>
+<button class="tablink" style="background-color: rgb(4, 255, 63);" id="btn2" onclick=forn2()>For n=2</button>
+<button class="tablink" style="background-color: #4857ff;" id="btn3" onclick=forn3()>For n=3</button>
+<button class="tablink" style="background-color: #67eb53;" id="btn4" onclick=foranyn()>For n>3</button>
 
-<button class="tablink" onclick="openPage('1d', this, 'brown')" id="defaultOpen"><a href="#1d"> For n=1</a></button>
+
+</div>
+<!-- <button class="tablink" onclick="openPage('1d', this, 'brown')" id="defaultOpen"><a href="#1d"> For n=1</a></button>
 <button class="tablink" onclick="openPage('2d', this, 'seagreen')"><a href="#2d">For n=2</a></button>
 <button class="tablink" onclick="openPage('3d', this, 'indigo')"><a href="#3d">For n=3</a></button>
-<button class="tablink" onclick="openPage('nd', this, 'darkorange')"><a href="#nd">For n>3</a></button>
+<button class="tablink" onclick="openPage('nd', this, 'darkorange')"><a href="#nd">For n>3</a></button> -->
 
-<div id="1d" class="tabcontent">
+<div id="1d" class="tabcontent" style="display: block;">
 <div class="responsive-three-column-grid">
   <div class="column" style="background-color:#fbeee6;">
     <h3 style="color:indigo;"> UNDERSTANDING</h3>
@@ -223,7 +229,7 @@ input{
 </div>
 </div>
 
-<div id="3d" class="tabcontent">
+<div id="3d" class="tabcontent" >
 <div class="responsive-three-column-grid">
   <div class="column" style="background-color:#fbeee6;">
     <h3 style="color:INDIGO;"> UNDERSTANDING</h3>
@@ -273,13 +279,62 @@ input{
 </div>
 <div class="vectorspace">
 
-  <h3 style="color:#eafaf1; background-color:darkgreen; text-align:center; font-size:25px;">Vector Space</h3>
-  <p style="text-align: center;">System (R<sup>n</sup>, +, .) together with R is denoted by R<sup>n</sup> and is a vector space over R (&#8757; it satisfies some interesting properties).</p>
+  <!-- <h3 style="color:#eafaf1; background-color:darkgreen; text-align:center; font-size:25px;">Vector Space</h3> -->
+  <p style="text-align: center;">System (R<sup>n</sup>, +, .) together with R, denoted by R<sup>n</sup>, is a vector space over R, known as the n-dimensional Euclidean space.</p>
   </div>
   <a href="./operations.html" class="previous">&laquo; Previous</a>
   <a href="./" class="next">Home &raquo;</a>
 </body>
 <script>
+
+function forn1(){
+    document.getElementById('1d').style.display = "block";
+    document.getElementById('2d').style.display = "none";
+    document.getElementById('3d').style.display = "none";
+    document.getElementById('nd').style.display = "none";
+    document.getElementById("btn1").style.backgroundColor = "#8E44AD";
+    document.getElementById("btn2").style.backgroundColor = "rgb(4, 255, 63)";
+    document.getElementById("btn3").style.backgroundColor = "#4857ff"; 
+    document.getElementById("btn4").style.backgroundColor = "#67eb53"; 
+  
+    
+}
+
+function forn2(){
+    document.getElementById('1d').style.display = "none";
+    document.getElementById('2d').style.display = "block";
+    document.getElementById('3d').style.display = "none";
+    document.getElementById('nd').style.display = "none";
+   
+    document.getElementById("btn1").style.backgroundColor = "green";
+    document.getElementById("btn2").style.backgroundColor = "#8E44AD";
+    document.getElementById("btn3").style.backgroundColor = "#4857ff"; 
+    document.getElementById("btn4").style.backgroundColor = "#67eb53"; 
+}
+function forn3(){
+    document.getElementById('1d').style.display = "none";
+    document.getElementById('2d').style.display = "none";
+    document.getElementById('3d').style.display = "block";
+    document.getElementById('nd').style.display = "none";
+    document.getElementById("btn1").style.backgroundColor = "green";
+    document.getElementById("btn2").style.backgroundColor = "rgb(4, 255, 63)";
+    document.getElementById("btn3").style.backgroundColor = "#8E44AD"; 
+    document.getElementById("btn4").style.backgroundColor = "#67eb53"; 
+    
+}
+function foranyn(){
+    document.getElementById('1d').style.display = "none";
+    document.getElementById('2d').style.display = "none";
+    document.getElementById('3d').style.display = "none";
+    document.getElementById('nd').style.display = "block";
+   
+    document.getElementById("btn1").style.backgroundColor = "green";
+    document.getElementById("btn2").style.backgroundColor = "rgb(4, 255, 63)";
+    document.getElementById("btn3").style.backgroundColor = "#4857ff"; 
+    document.getElementById("btn4").style.backgroundColor = "#8E44AD";
+    
+}
+
 function openPage(pageName,elmnt,color) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -431,6 +486,4 @@ function updateButton(){
 }
 </script>
 
-
-   
-</html> 
+</html>
