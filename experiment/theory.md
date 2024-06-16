@@ -58,13 +58,28 @@ It can be geometrically visualised for 1≤n≤3 only.
 
 **7. Example** <br>
 &emsp; **i.** The system (R<sup>n</sup>, +, .) is a vector space over R, where addition and scalar multiplication are described above. The zero of this vector space is 0≡(0, 0, 0, …, 0). Thus elements of Rn are vectors and elements of R are scalars. In the particular case when n=1, elements of R are both vectors and scalars. <br>
-&emsp; **ii.** The system (M<sup>2x2</sup>, +, .) is a vector space over R, where M<sup>2x2</sup>={ a, b, c, dR}, operation addition is defined to be += and the operation scalar multiplication is defined to be α.=. The zero of this vector space is 0≡.<br>
-The matrix $\begin{bmatrix}
- 1 & 2 \\
- 3 & 4
-\end{bmatrix}$ is invertible.
+&emsp; **ii.** The system (M<sup>2x2</sup>, +, .) is a vector space over R,<br>
+ 
+$$  \text{\\{where M}^{\text{2x2}}=\\ \begin{pmatrix}
+a&b \\\ c&d
+\end{pmatrix} \text{ a, b, c, d&isin;R\\}, operation addition is defined to be } \\ \begin{pmatrix}
+a&b \\\ c&d
+\end{pmatrix}+\\ \begin{pmatrix}
+r&s \\\ t&u
+\end{pmatrix} = \begin{pmatrix} a+r & c+t \\\ b+s & d+u \end{pmatrix} \text{ and}                                         
+$$
 
 
+$$\\newline\text{ the operation scalar multiplication is defined to be α.} \\ \begin{pmatrix}
+a&b \\\ c&d
+\end{pmatrix} =  \\ \begin{pmatrix}
+α.a&α.b \\\ α.c&α.d
+\end{pmatrix}. \text{The zero of this vector space is } \\ 0≡ \begin{pmatrix}
+0&0 \\\ 0&0
+\end{pmatrix}. $$
+
+**iii.** The system (R<sup>2</sup>, +, .) is not a vector space over R, where operations addition and scalar multiplication are described as follows: (x, y)+(a, b)=(x+a, 0), where x, y, a, b&isin;R and c(x, y)=(cx, 0); where c, x, y&isin;R. Reason:  There does not exist (a, b) such that (2,1)+(a, b)=(2,1) because if exists, then (2+a, 0)=(2, 1) i.e. 0=1, a contradiction.  
+ 
 **8. Properties**
 Let V be a vector space over R. For v, w ∈ V and α ∈ F,
 
