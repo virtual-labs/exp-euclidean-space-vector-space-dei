@@ -9,3 +9,4 @@
 | :---: | :---: | :---: | :---: | :---: |
 | 1 | Shinu Pachauri | shinupachouri520@gmail.com | Faculty of Science | Dayalbagh Educational Institute |
 | 2 | Yashi Agrawal | yashi03902@gmail.com | Faculty of Engineering | Dayalbagh Educational Institute |
+| 3 | A Gurucharan| gurucharan1027@gmail.com | Physics and Computer Science | Dayalbagh Educational Institute | 
